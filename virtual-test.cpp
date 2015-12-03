@@ -2,6 +2,9 @@
 #include <vector>
 
 using namespace std;
+enum note {
+        middleC, CSharp, Cflat
+};
 
 class Animal
 {
@@ -28,7 +31,24 @@ public:
         void eat() const { cout << "Cat eat" << endl; }
 };
 
-int main() {
+class Instrument
+{
+public:
+        virtual void play(note) const {
+                cout << "Instrument::play" << endl;
+        }
+};
+
+class Wind : public Instrument
+{
+public:
+        void play(note) const {
+                cout << "Wind::play" << endl;
+        }
+};
+
+int maina()
+{
         std::vector<Animal*> animals;
         animals.push_back(new Animal());
         animals.push_back(new Fish());
@@ -41,4 +61,15 @@ int main() {
                 delete *it;
         }
         return 0;
+}
+
+void tune(Instrument &i)
+{
+        i.play(middleC);
+}
+
+int main()
+{
+        Wind w;
+        tune(w);
 }
