@@ -19,11 +19,34 @@ public:
         }
 };
 
-int main()
+class Ractangle
+{
+        int wide, high;
+public:
+        Ractangle(int w = 0, int h = 0)
+                : wide(w), high(h) {}
+        int width()  const { return wide; }
+        int height() const { return high; }
+        void width(int w) { wide = w; }
+        void height(int h) { high = h; }
+};
+
+int maina()
 {
         Point p, q(1, 2, 3);
         p.print("value of p");
         q.print("value of q");
         printf("%d\n", addOne(2));
         return 0;
+}
+
+int main()
+{
+        Ractangle r(5, 7);
+        printf("width: %d\n", r.width());
+        printf("height: %d\n", r.height());
+        r.width(9);
+        r.height(11);
+        printf("new width: %d\n", r.width());
+        printf("new height: %d\n", r.height());
 }
