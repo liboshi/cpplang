@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+inline int addOne(int x) { return ++x; }
+
 class Point
 {
         int i, j, k;
@@ -22,5 +24,6 @@ int main()
         Point p, q(1, 2, 3);
         p.print("value of p");
         q.print("value of q");
+        printf("%d\n", addOne(2));
         return 0;
 }
