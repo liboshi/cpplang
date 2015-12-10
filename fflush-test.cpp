@@ -7,9 +7,13 @@ int main()
 {
         FILE *fp;
         if ((fp = fopen("output.txt", "a+")) != NULL) {
-                fprintf(fp, "%s", "test");
+                int i = 0;
+                while (i < 100){
+                        fprintf(fp, "%s\n", "test");
+                        fflush(fp);
+                        i++;
+                }
         }
-        //fflush(fp);
         sleep(5);
         return 0;
 }
