@@ -6,7 +6,7 @@ include(ExternalProject)
 # Download and install GoogleTest
 ExternalProject_Add(
     googletest
-    URL /Users/boshil/github.com/googletest/googletest
+    URL $ENV{HOME}/github.com/googletest/googletest
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/googletest
     # Disable install step
     INSTALL_COMMAND ""
