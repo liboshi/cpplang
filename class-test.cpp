@@ -22,6 +22,12 @@ void A::println() {
 }
 
 class B : public A {
+public:
+        void set(int sk)
+        {
+                k = sk;
+        }
+        int get() { return k; }
 };
 
 class Tree {
@@ -155,7 +161,8 @@ void printlnn(X& x) {
 }
 
 int main() {
-        Y y;
-        y.println();
-        printlnn(y);
+        B b;
+        b.j = 1;
+        b.set(10);
+        cout << b.get() << endl;
 }
