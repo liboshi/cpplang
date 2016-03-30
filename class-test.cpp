@@ -160,9 +160,15 @@ void printlnn(X& x) {
         x.println();
 }
 
+Z::Z() {
+        cout << "This is Z constructor" << endl;
+}
+
+void Z::print(char *name = "Boush") {
+        cout << name << endl;
+}
+
 int main() {
-        B b;
-        b.j = 1;
-        b.set(10);
-        cout << b.get() << endl;
+        Z z;
+        z.print();
 }

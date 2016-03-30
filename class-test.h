@@ -28,3 +28,10 @@ public:
         void println();
         ~Y();
 };
+
+class Z {
+public:
+        Z();
+        void print(char *name);
+        ~Z();
+};
