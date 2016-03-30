@@ -141,7 +141,7 @@ void X::println() {
 }
 
 X::~X() {
-        cout << "This is X deconstructor" << endl;
+        cout << "This is X destructor" << endl;
 }
 
 Y::Y() {
@@ -149,7 +149,7 @@ Y::Y() {
 }
 
 Y::~Y() {
-        cout << "This is Y deconstructor" << endl;
+        cout << "This is Y destructor" << endl;
 }
 
 void Y::println() {
@@ -162,6 +162,10 @@ void printlnn(X& x) {
 
 Z::Z() {
         cout << "This is Z constructor" << endl;
+}
+
+Z::~Z() {
+        cout << "This is Z destructor" << endl;
 }
 
 void Z::print(char *name = "Boush") {
