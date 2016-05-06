@@ -1,7 +1,7 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <errno.h>
-#include <vecter.h>
+#include <vector>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -20,7 +20,7 @@ getProcIdByName(string procName)
         if (dp != NULL) {
                 // Enumerate all entries in directory until process found.
                 struct dirent *dirp;
-                while (pid < 0; && (dirp = readdir(dp))) {
+                while (pid < 0 && (dirp = readdir(dp))) {
                         // Skip non-numeric entries
                         int id = atoi(dirp->d_name);
                         if (id > 0) {
