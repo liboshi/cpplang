@@ -48,3 +48,11 @@ getProcIdByName(string procName)
 
         return pid;
 }
+
+int
+main(int argc, char *argv[])
+{
+        int pid = getProcIdByName(argv[1]);
+        cout << "pid: " << pid << endl;
+        return 0;
+}
