@@ -7,6 +7,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -54,5 +55,7 @@ main(int argc, char *argv[])
 {
         int pid = getProcIdByName(argv[1]);
         cout << "pid: " << pid << endl;
+        pid_t sid = getsid(pid);
+        cout << "sid: " << sid << endl;
         return 0;
 }
