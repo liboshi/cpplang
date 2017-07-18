@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# YCM config files
+*.ycm_extra_conf.py
+
+# Vim swap file
+*.swp
